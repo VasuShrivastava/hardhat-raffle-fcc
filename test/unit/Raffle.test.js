@@ -21,7 +21,7 @@ const { assert, expect } = require("chai");
     });
     describe("enterRaffle", async function(){
         it("reverts when you don't pay enough", async () => {
-            await expect(raffle.enterRaffle({value: 0})).to.be.revertedWith("Raffle__SendMoreToEnterRaffle");
+            await expect(raffle.enterRaffle({value: 0})).to.be.revertedWith("Raffle__NotEnoughEth");
         });
     });
     
